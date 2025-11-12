@@ -15,13 +15,16 @@ def enter_move(board):
         try:
             move = int(input("Hamleni yap (1-9): "))
 
+            # Aralık kontrolü
             if not (1 <= move <= 9):
                 print("Lütfen 1-9 arasında bir sayı girin.")
                 continue
 
+            # Hamleyi tahta pozisyonuna çevir
             row = (move - 1) // 3
             col = (move - 1) % 3
 
+            # Karenin boş olup olmadığını kontrol et
             if board[row][col] not in ['X', 'O']:
                 board[row][col] = 'O'
                 break
@@ -40,6 +43,7 @@ def get_free_squares(board):
     return free_squares
 
 def check_win(board, mark):
+    # Yatay, dikey ve çapraz kontrol
     for r in range(3):
         if board[r][0] == mark and board[r][1] == mark and board[r][2] == mark:
             return True
@@ -57,6 +61,7 @@ def check_win(board, mark):
     return False
 
 def computer_move(board):
+    """Bilgisayar ('X') için rastgele bir hamle yapar."""
     free_squares = get_free_squares(board)
     
     if free_squares:
@@ -64,33 +69,46 @@ def computer_move(board):
         row, col = free_squares[index]
         board[row][col] = 'X'
 
+# === OYUN BAŞLANGICI ===
+
+# Tahtayı numaralarla hazırla
 board = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ]
-
+# Bilgisayar ilk hamleyi (ortayı) yapar
 board[1][1] = 'X'
 print("Bilgisayar ilk hamlesini yaptı.")
 display_board(board)
 
 while True:
+    # Kullanıcı hamlesi
     enter_move(board)
     display_board(board)
 
+    # Kullanıcı kazandı mı?
     if check_win(board, 'O'):
         print("Kazandın!")
         break
 
+    # Berabere mi?
     if not get_free_squares(board):
         print("Berabere!")
         break
 
+    # Bilgisayar hamlesi
     computer_move(board)
     display_board(board)
 
+    # Bilgisayar kazandı mı?
     if check_win(board, 'X'):
         print("Bilgisayar kazandı!")
+        break
+
+    # Berabere mi?
+    if not get_free_squares(board):
+        print("Berabere!")
         break
 
     if not get_free_squares(board):
