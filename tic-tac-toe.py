@@ -1,6 +1,7 @@
 #e01a01c01
 #tic-tac-toe oyunu
 import random
+
 def display_board(board):
     for row in range(3):
         print("+-------+-------+-------+")
@@ -113,4 +114,5 @@ while True:
     if not get_free_squares(board):
         print("Berabere!")
         break
+
 
