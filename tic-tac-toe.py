@@ -90,6 +90,7 @@ while True:
     # Kullanıcı kazandı mı?
     if check_win(board, 'O'):
         print("Kazandın!")
+        print("Oyun Bitti! Tebrikler!")
         break
 
     # Berabere mi?
@@ -114,5 +115,6 @@ while True:
     if not get_free_squares(board):
         print("Berabere!")
         break
+
 
 
