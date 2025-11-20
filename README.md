@@ -9,13 +9,18 @@ Tic Tac Toe , iki oyuncu arasında, 3×3'lük bir ızgara üzerinde oynanan basi
 # Nasıl Oynanır?
 Platform: Oyun, 3x3'lük (toplam 9 kare) bir ızgara üzerinde oynanır.
 
+
 Oyuncular: İki oyuncu vardır; biri X, diğeri O sembolünü kullanır.
+
 
 Hamleler: Oyuncular sırayla boş bir kareye kendi sembollerini çizerler.
 
+
 Kazanma: Yatay, dikey veya çapraz olarak 3 sembolü yan yana getiren ilk oyuncu oyunu kazanır.
 
+
 Berabere: Tüm tahta dolduğunda kazanan yoksa, oyun berabere biter.
+
 
 # Oyunun Sonu
 Oyun 3 şekilde biter:
