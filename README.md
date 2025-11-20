@@ -12,12 +12,9 @@ Platform: Oyun, 3x3'lük (toplam 9 kare) bir ızgara üzerinde oynanır.
 
 Oyuncular: İki oyuncu vardır; biri X, diğeri O sembolünü kullanır.
 
-
 Hamleler: Oyuncular sırayla boş bir kareye kendi sembollerini çizerler.
 
-
 Kazanma: Yatay, dikey veya çapraz olarak 3 sembolü yan yana getiren ilk oyuncu oyunu kazanır.
-
 
 Berabere: Tüm tahta dolduğunda kazanan yoksa, oyun berabere biter.
 
@@ -25,8 +22,11 @@ Berabere: Tüm tahta dolduğunda kazanan yoksa, oyun berabere biter.
 # Oyunun Sonu
 Oyun 3 şekilde biter:
 1.Kazanan: Oyunculardan biri üçlü sırayı tamamlar ve oyunu kazanır diğer oyuncu ise kaybeder.
+
 2.Beraberlik: Eğer 9 karenin hepsi dolmasına rağmen iki oyuncuda 3 sembolü yan yana getiremezse oyun berabere biter.
+
 3.Kaybetme:Rakip oyuncu üçlemeyi tamamladığında, diğer oyuncu oyunu kaybetmiş olur.
+
 # Örnekler 
 <img width="263" height="543" alt="Ekran görüntüsü 2025-11-19 212638" src="https://github.com/user-attachments/assets/97c46f0b-da42-490b-a5db-415f519b2c51" />
 <img width="258" height="326" alt="Ekran görüntüsü 2025-11-19 212659" src="https://github.com/user-attachments/assets/1fdf5880-3f46-4701-870f-ba86b4a18ad1" />
