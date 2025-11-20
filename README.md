@@ -21,6 +21,7 @@ Berabere: Tüm tahta dolduğunda kazanan yoksa, oyun berabere biter.
 
 # Oyunun Sonu
 Oyun 3 şekilde biter:
+
 1.Kazanan: Oyunculardan biri üçlü sırayı tamamlar ve oyunu kazanır diğer oyuncu ise kaybeder.
 
 2.Beraberlik: Eğer 9 karenin hepsi dolmasına rağmen iki oyuncuda 3 sembolü yan yana getiremezse oyun berabere biter.
